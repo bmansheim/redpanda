@@ -16,27 +16,23 @@ For production or benchmarking, setup a [production deployment](production-deplo
 We've simplified the installation process down to a few commands:
 
 [codeSelector]
-- On Fedora/RedHat systems:
+```fedora
+## Run the setup script to download and install the repo
+curl -1sLf 'https://packages.vectorized.io/nzc4ZYQK3WRGd9sy/redpanda/cfg/setup/bash.rpm.sh' | sudo -E bash && \
+## Use yum to install redpanda
+sudo yum install redpanda -y && \
+## Start redpanda as a service 
+sudo systemctl start redpanda
+```
 
-     ```bash
-     ## Run the setup script to download and install the repo
-     curl -1sLf 'https://packages.vectorized.io/nzc4ZYQK3WRGd9sy/redpanda/cfg/setup/bash.rpm.sh' | sudo -E bash && \
-     ## Use yum to install redpanda
-     sudo yum install redpanda -y && \
-     ## Start redpanda as a service 
-     sudo systemctl start redpanda
-     ```
-
-- On Debian/Ubuntu systems:
-
-     ```bash
-     ## Run the setup script to download and install the repo
-     curl -1sLf 'https://packages.vectorized.io/nzc4ZYQK3WRGd9sy/redpanda/cfg/setup/bash.deb.sh' | sudo -E bash && \
-     ## Use apt to install redpanda
-     sudo apt install redpanda -y && \
-     ## Start redpanda as a service 
-     sudo systemctl start redpanda
-     ```
+```ubuntu
+## Run the setup script to download and install the repo
+curl -1sLf 'https://packages.vectorized.io/nzc4ZYQK3WRGd9sy/redpanda/cfg/setup/bash.deb.sh' | sudo -E bash && \
+## Use apt to install redpanda
+sudo apt install redpanda -y && \
+## Start redpanda as a service 
+sudo systemctl start redpanda
+```
 [/codeSelector]
 
 To see that Redpanda is up and running, run: `sudo systemctl status redpanda`
