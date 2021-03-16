@@ -77,11 +77,11 @@ We recommend that you keep topic manifests in order to recover the corresponding
         - Create a service user with HMAC keys
             and copy the keys to the Redpanda configuration options `archival_storage_s3_access_key` and `archival_storage_s3_secret_key`, respectively. 
 
-> **_Note:_** The secret and access keys are stored in plain text in configuration files.
+    > **_Note:_** The secret and access keys are stored in plain text in configuration files.
 
-1. Configure Redpanda:
+2. Configure Redpanda:
 
-    - Configure these parameters:
+    - Configure these parameters in the Redpanda configuration:
 
         | Config parameter name                       | Type         | Descripion                                              |
         |---------------------------------------------|--------------|---------------------------------------------------------|
